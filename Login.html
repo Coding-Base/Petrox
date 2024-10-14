@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="signup.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="form-box">
+          <div class="logo">
+   <image src="Logo.png" class="petro"/>
+</div><br><br><br>
+            <h2>Sign In </h2>
+            <p>By using our services you are agreeing to our <a href="#">Terms</a> and <a href="#">Privacy Statement</a></p><br>
+                  <p style="color: #302AF3 ;font-size:10px;font-weight:300;" id="display"></p><br>
+            <form action="#">
+              <div id="general_use">
+                <input type="text" placeholder="Username" required>
+                <input placeholder="Password" id="password" type="password"  required><br>
+                <a style="display:flex;justify-content:left;"href="#">Forget Password?</a><br><br>
+                <button id="button"type="submit">Login</button>
+                            </form><br><br>
+                                        <p>New Here? <a href="signup.html">Create Account</a></p><br>
+         
+
+            </div>
+            </div> 
+        </div>
+    <script>       const screen = document.getElementById("display")
+     function petstudent() {
+       const screen = document.getElementById("display")
+       screen.innerText="You can login with your Name and Registration Number"
+       
+      
+     }
+     const button = document.getElementById("button")
+     button.addEventListener("click",login)
+     function login(e){
+       e.preventDefault();
+       const Reg_Number = document.getElementById("password").value
+       if( Reg_Number.endsWith("3")){
+         screen.innerText="Login in process, please wait...."
+       }else{
+         screen.innerText="You are not a Petroleum Engineering Student"
+       }}
+     
+      
+    </script>
+</body>
+</html>

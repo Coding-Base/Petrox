@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petroleum Engineering</title>
+    <link rel="stylesheet" href="onboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+</head>
+ 
+<body>
+
+    <div class="container">
+        <div class="skip"><button id="button" style="border:none;color:black;background:white;">Skip</button></div>
+        <div class="content">
+            <img id="image" src="final1.png" alt="Illustration" class="illustration">
+            <div class="text">
+                <h2 id="h2">Actualize Goals</h2>
+                <p id="p">Learn more about Petroleum Engineering and its opportunities in the oil sector.</p>
+            </div>
+            <div class="indicator">
+                <span id="active"class="active"></span>
+                <span id="inactive1"class="inactive1"></span>
+                <span id="inactive2" class="inactive2"></span>
+            </div>
+        </div>
+        <a href="signup.html"><button  class="login-btn">Login</button></a>
+    </div>
+    
+    <script>
+      const image= document.getElementById("image")
+      const p= document.getElementById("p")
+const h2= document.getElementById("h2")
+      const button = document.getElementById("button")
+      const inactive1= document.getElementById("inactive1")
+      const active= document.getElementById("active")
+      const inactive2= document.getElementById("inactive2")
+      button.addEventListener("click",Replace_image)
+      function Replace_image(){
+    image.src= "final3.png"
+    inactive1.setAttribute("Class","active")
+    active.setAttribute("Class","inactive3")
+    h2.innerText = "Study Better"
+    p.innerText=" Have access to Petroleum Engineering courses and Materials  "
+    button.setAttribute("Id","second")
+    button.addEventListener("click",slide_2)
+      }
+      function slide_2(){
+        image.src= "Image2.jpg"
+        inactive2.setAttribute("Class","active")
+        inactive1.setAttribute("Class","inactive1")
+        h2.innerHTML = "Learn Better"
+    p.innerHTML=" Study more with solved examples and Explained parameters"  
+    button.setAttribute("Id","third")
+    button.addEventListener("click",redirect)
+      }
+      function redirect(){
+        window.location.replace("Home.html")
+      }
+        
+    </script>
+</body>
+</html>
